@@ -157,15 +157,14 @@ a:hover > b {
 
 @media (max-width: 767.98px) {
   .header-menu-burger {
-    display: inline-block;
+    display: inline-block; /*show the burger menu icon when page get smaller*/
   }
   .header-menu {
-    display: none;
-    width: 100%;
+    display: none; /*hide the menu*/
+    width: 100%; /*set 100% size width when the burger menu selected*/
   }
   .header-menu-item {
-    display: block;
-    border-bottom:1px solid #cececc ;
-  
+    display: block; /*make menu blocked - full size page*/
+    border-bottom: 1px solid #cececc;
   }
 }
