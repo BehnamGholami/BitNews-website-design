@@ -1,0 +1,171 @@
+* {
+  margin: 0 auto;
+  font-size: 14px;
+  color: #333;
+}
+/*set default style*/
+/*fix the float problem with clear fix once*/
+.clear-fix {
+  clear: both;
+}
+/*set the position of things! relative and absolute once!*/
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+/* set the title in the main page! */
+.title {
+  /*make space between title and line bottom*/
+  padding-bottom: 20px;
+  /*set space between title and line with content below*/
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: 700; /*make title bold*/
+  position: relative; /*if we use a aboslute pos. in child. we must set the relative position to the parent*/
+}
+/*create the gray and orange line under the title with before and after.*/
+.title::after {
+  position: absolute; /*we need to stick it to the title*/
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+}
+.title::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 80px;
+  height: 5px;
+  background: #f9b500;
+  z-index: 1;
+}
+/*the article title and general title are different*/
+.article-title {
+  padding-top: 20px;
+}
+.article-title a {
+  font-size: 20px;
+  font-weight: 700;
+}
+/*info bar include like, comment and etc of article*/
+.info-bar {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 0;
+}
+.info-bar li {
+  display: inline-block;
+  margin-right: 20px;
+  line-height: 25px; /*if info bar have 2 line! with line height we set space between them*/
+}
+/*set the color of project at once*/
+.text-muted {
+  color: #888;
+}
+.text-yellow {
+  color: #f9b500;
+}
+/*solve the <a> tag problem - underline and transition*/
+a {
+  text-decoration: none;
+  transition: all 0.5s;
+}
+a:hover {
+  color: #f9b500;
+}
+b {
+  transition: all 0.5s;
+  font-weight: 700;
+}
+
+a:hover > b {
+  color: #f9b500;
+}
+/*this site is on 1200px - if you want more, nothing will happen :) just 1200px maximum width*/
+.app {
+  width: 1200px;
+}
+/*i set bootstrap size for app div. app div include all page except footer. because footer is full wide */
+@media only screen and (max-width: 1199.98px) {
+  .app {
+    width: 992px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .app {
+    width: 768px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .app {
+    width: 576px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .app {
+    width: calc(100% - 30px);
+    padding: 0 15px;
+  }
+}
+
+/*style the menu and logo on top*/
+.header-logo {
+  float: left; /*insert top logo in left side*/
+  margin: 30px 0;
+}
+.header-menu {
+  float: right; /*sent menu to the right side*/
+}
+.header-menu-item {
+  display: inline; /*make menu inside together*/
+}
+.header-menu-item-link {
+  padding: 0 15px;
+  line-height: 80px; /*use line height to give some space from top*/
+  font-weight: 700;
+}
+/*create class to show and hide the burger menu*/
+.show {
+  display: inline-block !important;
+}
+/*set logo smaller*/
+@media (max-width: 991.98px) {
+  .header-logo {
+    height: 15px;
+    margin: 32px 0;
+  }
+  /*reduce space from item link.*/
+  .header-menu-item-link {
+    padding: 0 5px;
+  }
+}
+
+/*style the burger menu*/
+.header-menu-burger {
+  float: right;
+  display: none; /*hide in full size*/
+  background-color: white;
+  border: none;
+  margin-top: 40px;
+}
+
+@media (max-width: 767.98px) {
+  .header-menu-burger {
+    display: inline-block;
+  }
+  .header-menu {
+    display: none;
+    width: 100%;
+  }
+  .header-menu-item {
+    display: block;
+    border-bottom:1px solid #cececc ;
+  
+  }
+}
