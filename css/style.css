@@ -214,7 +214,8 @@ a:hover > b {
 }
 
 .bg-1 {
-  background: url("../images/slider-1-1200x900.jpg");
+  background: url(../images/slider-1-1200x900.jpg) no-repeat center;
+  background-size: cover;
 }
 
 .bg-2 {
